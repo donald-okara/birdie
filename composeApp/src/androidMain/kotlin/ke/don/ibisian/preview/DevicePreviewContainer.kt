@@ -1,5 +1,6 @@
 package ke.don.ibisian.preview
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes
 import androidx.compose.material3.Surface
@@ -9,24 +10,14 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.unit.dp
 import ke.don.design_system.theme.BirdieTheme
+import ke.don.design_system.theme.desktopShapes
+import ke.don.design_system.theme.mobileShapes
 
 @Composable
 fun DevicePreviewContainer(
     isDarkTheme: Boolean = false,
     content: @Composable () -> Unit
 ){
-    val mobileShapes =  Shapes(
-        small = RoundedCornerShape(8.dp),
-        medium = RoundedCornerShape(12.dp),
-        large = RoundedCornerShape(percent = 50) // pill CTA
-    )
-
-    val desktopShapes = Shapes(
-        small = RoundedCornerShape(2.dp),
-        medium = RoundedCornerShape(6.dp),
-        large = RoundedCornerShape(0.dp) // rectangle CTA
-    )
-
     val isDesktop = LocalInspectionMode.current && // true when inside @Preview
             LocalConfiguration.current.screenWidthDp > 600
 
@@ -37,7 +28,7 @@ fun DevicePreviewContainer(
         darkTheme = isDarkTheme
     ) {
         Surface(
-            modifier = Modifier
+            modifier = Modifier.fillMaxSize()
         ) {
             content.invoke()
         }
