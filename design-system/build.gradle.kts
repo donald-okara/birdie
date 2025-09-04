@@ -85,7 +85,6 @@ kotlin {
             }
         }
 
-
         iosMain {
             dependencies {
                 // Add iOS-specific dependencies here. This a source set created by Kotlin Gradle
@@ -101,7 +100,6 @@ kotlin {
             implementation(libs.kotlinx.coroutinesSwing)
         }
     }
-
 }
 
 compose {
@@ -119,5 +117,4 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
     }
-
 }

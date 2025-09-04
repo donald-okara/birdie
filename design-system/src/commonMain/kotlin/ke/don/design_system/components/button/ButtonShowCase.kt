@@ -1,3 +1,12 @@
+/*
+ * Copyright © 2025 Donald O. Isoe (isoedonald@gmail.com)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ */
 package ke.don.design_system.components.button
 
 import androidx.compose.foundation.layout.Arrangement
@@ -19,18 +28,18 @@ fun ButtonShowcase() {
             .padding(8.dp)
             .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         ButtonType.entries.forEach {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(16.dp) // spacing between buttons
+                horizontalArrangement = Arrangement.spacedBy(16.dp), // spacing between buttons
             ) {
                 ButtonToken(
                     onClick = {},
                     buttonType = it,
-                    modifier = Modifier.weight(1f) // take half width
+                    modifier = Modifier.weight(1f), // take half width
                 ) {
                     Text(it.name)
                 }
@@ -38,7 +47,7 @@ fun ButtonShowcase() {
                     onClick = {},
                     buttonType = it,
                     enabled = false,
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
                 ) {
                     Text(it.name)
                 }

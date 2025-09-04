@@ -7,12 +7,3 @@
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  */
-package ke.don.birdie
-
-class Greeting {
-    private val platform = getPlatform()
-
-    fun greet(): String {
-        return "Hello, ${platform.name}!"
-    }
-}

@@ -1,3 +1,12 @@
+/*
+ * Copyright © 2025 Donald O. Isoe (isoedonald@gmail.com)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ */
 package ke.don.birdie
 
 import androidx.compose.animation.AnimatedVisibility
@@ -13,14 +22,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
-
 import ke.don.design_system.assets.Images
 import ke.don.design_system.theme.BirdieTheme
 import ke.don.koffee.annotations.ExperimentalKoffeeApi
 import ke.don.koffee.domain.Koffee
 import ke.don.koffee.ui.KoffeeBar
+import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalKoffeeApi::class)
 @Composable
@@ -30,7 +38,7 @@ fun App() {
         KoffeeBar {
             Surface(
                 modifier = Modifier.fillMaxSize(),
-                color = MaterialTheme.colorScheme.background
+                color = MaterialTheme.colorScheme.background,
             ) {
                 var showContent by remember { mutableStateOf(false) }
                 Column(
@@ -44,9 +52,9 @@ fun App() {
                             showContent = !showContent
                             Koffee.show(
                                 title = "Hello Matcha",
-                                description = "We just successfully installed Koffee"
+                                description = "We just successfully installed Koffee",
                             )
-                        }
+                        },
                     ) {
                         Text("Click me!")
                     }
@@ -59,18 +67,16 @@ fun App() {
                             Image(painterResource(Images.appIcon), null)
                             Text(
                                 "Compose: $greeting",
-                                color = MaterialTheme.colorScheme.onSurface
+                                color = MaterialTheme.colorScheme.onSurface,
                             )
                             Text(
                                 "Compose: ${MaterialTheme.colorScheme.background.value}}",
-                                color = MaterialTheme.colorScheme.onSurface
+                                color = MaterialTheme.colorScheme.onSurface,
                             )
                         }
                     }
                 }
             }
-
         }
-
     }
 }

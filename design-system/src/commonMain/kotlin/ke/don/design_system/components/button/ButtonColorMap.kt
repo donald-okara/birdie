@@ -1,3 +1,12 @@
+/*
+ * Copyright © 2025 Donald O. Isoe (isoedonald@gmail.com)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ */
 package ke.don.design_system.components.button
 
 import androidx.compose.material3.ButtonColors
@@ -27,13 +36,13 @@ val ButtonType.buttonTypeColor: @Composable () -> ButtonColors
                 containerColor = MaterialTheme.colorScheme.tertiary,
                 contentColor = MaterialTheme.colorScheme.onTertiary,
                 disabledContentColor = MaterialTheme.colorScheme.tertiary.copy(alpha = disabledAlpha),
-                disabledContainerColor = MaterialTheme.colorScheme.tertiary.copy(alpha = disabledAlpha)
+                disabledContainerColor = MaterialTheme.colorScheme.tertiary.copy(alpha = disabledAlpha),
             )
             ButtonType.Error -> ButtonDefaults.buttonColors(
                 containerColor = MaterialTheme.colorScheme.error,
                 contentColor = MaterialTheme.colorScheme.onError,
                 disabledContentColor = MaterialTheme.colorScheme.error.copy(alpha = disabledAlpha),
-                disabledContainerColor = MaterialTheme.colorScheme.error.copy(alpha = disabledAlpha)
+                disabledContainerColor = MaterialTheme.colorScheme.error.copy(alpha = disabledAlpha),
             )
             ButtonType.Neutral -> ButtonDefaults.buttonColors(
                 containerColor = MaterialTheme.colorScheme.onSurface,
