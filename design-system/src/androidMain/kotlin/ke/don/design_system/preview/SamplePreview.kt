@@ -1,4 +1,4 @@
-package ke.don.ibisian.preview
+package ke.don.design_system.preview
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.PreviewParameter

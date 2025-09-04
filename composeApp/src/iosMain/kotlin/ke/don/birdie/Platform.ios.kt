@@ -1,4 +1,4 @@
-package ke.don.ibisian
+package ke.don.birdie
 
 import platform.UIKit.UIDevice
 

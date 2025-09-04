@@ -1,10 +1,9 @@
 package ke.don.design_system.assets
 
-import ibisian.design_system.generated.resources.Res
-import ibisian.design_system.generated.resources.app_icon
-import ibisian.design_system.generated.resources.app_logo_black
-import ibisian.design_system.generated.resources.app_logo_transparent
-import org.jetbrains.compose.resources.painterResource
+import birdie.design_system.generated.resources.Res
+import birdie.design_system.generated.resources.app_icon
+import birdie.design_system.generated.resources.app_logo_black
+import birdie.design_system.generated.resources.app_logo_transparent
 
 
 object Images {

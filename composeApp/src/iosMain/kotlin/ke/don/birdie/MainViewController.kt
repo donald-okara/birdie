@@ -1,4 +1,4 @@
-package ke.don.ibisian
+package ke.don.birdie
 
 import androidx.compose.ui.window.ComposeUIViewController
 
