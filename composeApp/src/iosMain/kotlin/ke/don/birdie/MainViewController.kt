@@ -7,6 +7,8 @@
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  */
-package ke.don.design_system
+package ke.don.birdie
 
-actual fun platform() = "Android"
+import androidx.compose.ui.window.ComposeUIViewController
+
+fun MainViewController() = ComposeUIViewController { App() }

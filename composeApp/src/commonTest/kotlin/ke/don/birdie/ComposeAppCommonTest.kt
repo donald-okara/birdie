@@ -7,6 +7,15 @@
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  */
-package ke.don.design_system
+package ke.don.birdie
 
-actual fun platform() = "Android"
+import kotlin.test.Test
+import kotlin.test.assertEquals
+
+class ComposeAppCommonTest {
+
+    @Test
+    fun example() {
+        assertEquals(3, 1 + 2)
+    }
+}

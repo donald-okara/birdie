@@ -7,6 +7,12 @@
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  */
-package ke.don.design_system
+package ke.don.birdie
 
-actual fun platform() = "Android"
+import android.os.Build
+
+class AndroidPlatform : Platform {
+    override val name: String = "Android ${Build.VERSION.SDK_INT}"
+}
+
+actual fun getPlatform(): Platform = AndroidPlatform()

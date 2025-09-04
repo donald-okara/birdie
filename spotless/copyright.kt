@@ -7,6 +7,3 @@
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  */
-package ke.don.design_system
-
-actual fun platform() = "Android"

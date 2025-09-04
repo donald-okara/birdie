@@ -1,4 +1,4 @@
-rootProject.name = "Ibisian"
+rootProject.name = "Birdie"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

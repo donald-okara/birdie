@@ -7,6 +7,12 @@
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  */
-package ke.don.design_system
+package ke.don.birdie
 
-actual fun platform() = "Android"
+class Greeting {
+    private val platform = getPlatform()
+
+    fun greet(): String {
+        return "Hello, ${platform.name}!"
+    }
+}

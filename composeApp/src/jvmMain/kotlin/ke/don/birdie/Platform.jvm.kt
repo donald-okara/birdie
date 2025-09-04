@@ -7,6 +7,10 @@
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  */
-package ke.don.design_system
+package ke.don.birdie
 
-actual fun platform() = "Android"
+class JVMPlatform : Platform {
+    override val name: String = "Java ${System.getProperty("java.version")}"
+}
+
+actual fun getPlatform(): Platform = JVMPlatform()

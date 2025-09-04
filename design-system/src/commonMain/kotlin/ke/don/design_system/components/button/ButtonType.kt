@@ -7,6 +7,13 @@
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  */
-package ke.don.design_system
+package ke.don.design_system.components.button
 
-actual fun platform() = "Android"
+enum class ButtonType {
+    Primary,
+    Secondary,
+    Tertiary,
+    Error,
+    Neutral,
+    Outlined,
+}

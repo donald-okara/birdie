@@ -19,11 +19,13 @@ kotlinStdlib = "2.2.0"
 runner = "1.7.0"
 core = "1.7.0"
 uiTooling = "1.9.0"
+koffee = "0.2.0-beta3"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { module = "junit:junit", version.ref = "junit" }
+koffee = { module = "io.github.donald-okara:koffee", version.ref = "koffee" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
 androidx-testExt-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-testExt" }
 androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-espresso" }

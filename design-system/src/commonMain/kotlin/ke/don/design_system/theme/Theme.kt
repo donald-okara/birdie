@@ -1,3 +1,12 @@
+/*
+ * Copyright © 2025 Donald O. Isoe (isoedonald@gmail.com)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ */
 package ke.don.design_system.theme
 
 import androidx.compose.material3.MaterialTheme
@@ -5,7 +14,6 @@ import androidx.compose.material3.Shapes
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import com.example.ui.theme.AppTypography
 
 private val lightScheme = lightColorScheme(
     primary = primaryLight,
@@ -83,7 +91,6 @@ private val darkScheme = darkColorScheme(
     surfaceContainerHighest = surfaceContainerHighestDark,
 )
 
-
 @Composable
 expect fun systemInDarkTheme(): Boolean
 
@@ -91,18 +98,19 @@ expect fun systemInDarkTheme(): Boolean
 fun BirdieTheme(
     darkTheme: Boolean = systemInDarkTheme(),
     shapes: Shapes = AppShapes,
-    content: @Composable() () -> Unit,
+    content:
+    @Composable()
+    () -> Unit,
 ) {
-  val colorScheme = when {
-      darkTheme -> darkScheme
-      else -> lightScheme
-  }
+    val colorScheme = when {
+        darkTheme -> darkScheme
+        else -> lightScheme
+    }
 
     MaterialTheme(
         colorScheme = colorScheme,
         typography = AppTypography,
         content = content,
-        shapes = shapes
+        shapes = shapes,
     )
 }
-

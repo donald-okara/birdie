@@ -18,7 +18,6 @@ tasks.register<JavaExec>("runPreview") {
     classpath = sourceSets["jvmMain"].runtimeClasspath
 }
 
-
 kotlin {
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -26,20 +25,20 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
-        iosSimulatorArm64()
+        iosSimulatorArm64(),
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
         }
     }
-    
+
     jvm()
-    
+
     sourceSets {
         androidMain.dependencies {
             implementation(compose.preview)
@@ -50,6 +49,7 @@ kotlin {
             implementation(compose.foundation)
             implementation(compose.material3)
             implementation(compose.ui)
+            implementation(libs.koffee)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
@@ -67,11 +67,11 @@ kotlin {
 }
 
 android {
-    namespace = "ke.don.ibisian"
+    namespace = "ke.don.birdie"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "ke.don.ibisian"
+        applicationId = "ke.don.birdie"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -99,11 +99,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "ke.don.ibisian.MainKt"
+        mainClass = "ke.don.birdie.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "ke.don.ibisian"
+            packageName = "ke.don.birdie"
             packageVersion = "1.0.0"
         }
     }
